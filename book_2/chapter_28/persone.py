@@ -11,7 +11,6 @@ class Persone:
 
     def last_name(self):
         return self.name.split()[-1]
-<<<<<<< HEAD
 
     def give_raise(self, percent):
         self.pay = int(self.pay * (1 + percent))
@@ -52,19 +51,3 @@ if __name__ == "__main__":
     for hyuman in (bob, sue, tom):
         hyuman.give_raise(0.1)
         print(hyuman)
-=======
-    
-    def give_raise(self, percent):
-        self.pay = int(self.pay *(1+percent))
-
-if __name__ == '__main__':
-    bob = Persone('Bob Smith')
-    sue = Persone('Sue Jones', job='dev', pay=100000)
-
-    print(bob.name, bob.pay)
-    print(sue.name, sue.pay)
-    print()
-    print(bob.last_name(), sue.last_name())
-    sue.give_raise(.1)
-    print(sue.pay)
->>>>>>> 18c829f1cf7687faefbd827e783e0884b1a526c3
