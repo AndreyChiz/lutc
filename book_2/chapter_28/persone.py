@@ -1,4 +1,12 @@
-class Persone:
+from classtools import AttrDisplay
+
+"""
+Регистрирует и обрабатывает сведения о людях.
+Для тестирования классов из этого файла запустите его напрямую
+"""
+
+
+class Persone(AttrDisplay):
     def __init__(
         self,
         name,
@@ -15,20 +23,16 @@ class Persone:
     def give_raise(self, percent):
         self.pay = int(self.pay * (1 + percent))
 
-    def __repr__(self):
-        return "Persone({}, {})".format(self.name, self.pay)
-
 
 class Manager(Persone):
-    # def __init__(self, name, pay):
-    #     Persone.__init__(self, name, "mngr", pay)
-
     def __init__(self, name, pay):
-        super().__init__(name, "mngr", pay)
+        Persone.__init__(self, name, "mngr", pay)
+
+    # def __init__(self, name, pay):
+    #     super().__init__(name, "mngr", pay)
 
     def give_raise(self, percent, bonus=0.1):
         Persone.give_raise(self, percent + bonus)
-
 
 
 if __name__ == "__main__":
