@@ -21,7 +21,8 @@ dd = SomeClass('sfsf', 22)
 class CheckInit(SomeClass):
     def __init__(self, name, spam, number):
         super().__init__(name, number)
-        self.spam = "spam from CheckInit"        
+        self.spam = "spam from CheckInit"      
+        
         
 
 
