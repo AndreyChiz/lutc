@@ -12,23 +12,23 @@ class Squares:
         self.value += 1
         return self.value**2
 
+if __name__ == '__main__':
+    for i in Squares(1, 5):     
+        print(i, end=" ")
 
-for i in Squares(1, 5):
-    print(i, end=" ")
+    x = Squares(1, 5)
+    I = iter(x)
 
-x = Squares(1, 5)
-I = iter(x)
-
-print(next(I))
-print(next(I))
-print(next(I))
-print(next(I))
-print(next(I))
+    print(next(I))
+    print(next(I))
+    print(next(I))
+    print(next(I))
+    print(next(I))
 # print(next(I)) #Stop Iteration
 
 # для использования смещения можно сохранить в список
 # так как list() итерационный контекст это будет автоматом
 
-x = Squares(1,5)
-#x[1] не сработает 
-print(list(x)[1], 'элемент списка') 
+    x = Squares(1,5)
+    #x[1] не сработает 
+    print(list(x)[1], 'элемент списка') 
