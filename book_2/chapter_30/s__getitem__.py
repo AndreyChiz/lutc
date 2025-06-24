@@ -41,3 +41,17 @@ class SliceNumbsGetter:
 x = SliceNumbsGetter()
 x[99]
 x[slice(1, 3, 2)]
+
+class IndexSetter:
+    data = [100]
+    dict_data = {}
+    def __setitem__(self, index, value):
+        # self.data[index] = value
+        self.dict_data[index] = value
+
+ddd = IndexSetter()
+# ddd[1:5] = [1,2,3,4,5,6,7]
+ddd['key'] = 'value'
+
+print(ddd.data)
+print(ddd.dict_data)
