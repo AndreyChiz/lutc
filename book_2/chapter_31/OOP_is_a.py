@@ -4,21 +4,22 @@ class Employee:
         self.salary = salary
 
     def give_raise(self, percent):
-        
         self.salary = self.salary + (self.salary * percent)
 
     def work(self):
         print(self.name, "does stuff")
 
     def __repr__(self):
-        return "<Employee: name ={}, selary{}>".format(self.name, self.salary)
-    
+        return "<Employee: name={}, selary={}>".format(self.name, self.salary)
+
+
 class Chef(Employee):
     def __init__(self, name):
         Employee.__init__(self, name, 50000)
 
     def work(self):
         print(self.name, "makes food")
+
 
 class Server(Employee):
     def __init__(self, name):
@@ -27,22 +28,19 @@ class Server(Employee):
     def work(self):
         print(self.name, "interfaces with costumer")
 
+
 class PizzaRobot(Chef):
-    def __init__(self,name):
+    def __init__(self, name):
         Chef.__init__(self, name)
+
     def work(self):
         print(self.name, "makes pizza")
 
 
 if __name__ == "__main__":
-
-    bob = PizzaRobot('bob')
+    bob = PizzaRobot("bob")
     print(bob)
     bob.work()
     bob.give_raise(0.20)
     print(bob)
     print()
-
-
-
-    
